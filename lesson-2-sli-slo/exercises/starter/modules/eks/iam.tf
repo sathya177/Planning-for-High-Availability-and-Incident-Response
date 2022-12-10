@@ -46,7 +46,7 @@
 
   resource "aws_iam_role_policy_attachment" "cluster_AmazonEKSCloudwatchPolicy" {
    role       = aws_iam_role.eks_node_cluster_role.name
-   policy_arn = arn:aws:iam::242367312075:policy/app-udacity-sathya-eks-cluster-role-cloudwatch-policy
+   policy_arn = "arn:aws:iam::242367312075:policy/app-udacity-sathya-eks-cluster-role-cloudwatch-policy"
  }
 
   resource "aws_iam_role_policy_attachment" "node_AmazonEKSWorkerNodePolicy" {
@@ -70,6 +70,6 @@
  }
 
   resource "aws_iam_role_policy_attachment" "node_harmony_policy_attachment" {
-   policy_arn = arn:aws:iam::242367312075:policy/app-udacity-sathya-instance-policy
+   policy_arn = "arn:aws:iam::242367312075:policy/app-udacity-sathya-instance-policy"
    role       = aws_iam_role.eks_node_cluster_role.name
  }
